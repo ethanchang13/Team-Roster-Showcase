@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My Team Roster</title>
-    <!-- Required meta tags -->
+    <title>Golden State Warriors</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <!-- Bootstrap CSS v5.2.1 -->
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,64 +26,432 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <header class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Warriors Showcase</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="roster.html">Roster</a>
-            </li>
-          </ul>
+    <header class="relative">
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-expand-lg bg-warriors-navy fixed top-0 w-full z-50 shadow-xl transition-all duration-300"
+      >
+        <div class="container mx-auto px-4">
+          <a
+            class="navbar-brand text-gold font-poppins font-extrabold text-2xl flex items-center"
+            href="index.html"
+          >
+            <i class="fas fa-basketball-ball mr-3 text-3xl"></i>Warriors Elite
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto space-x-4">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-gold hover:text-white font-semibold transition-colors"
+                  href="index.html"
+                  ><i class="fas fa-home mr-1"></i>Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-gold hover:text-white font-semibold transition-colors"
+                  href="about.html"
+                  ><i class="fas fa-info-circle mr-1"></i>About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-gold hover:text-white font-semibold transition-colors"
+                  href="roster.html"
+                  ><i class="fas fa-users mr-1"></i>Roster</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="hero-parallax relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white"
+      >
+        <div class="absolute inset-0 bg-warriors-navy opacity-60"></div>
+        <div class="relative z-10">
+          <h1 class="text-6xl font-poppins font-extrabold mb-4 animate-fade-in">
+            Golden State Warriors
+          </h1>
+          <p class="text-2xl mb-8">
+            A Legacy of Excellence in the 2025 NBA Season
+          </p>
+          <div class="flex justify-center space-x-4">
+            <span
+              class="badge bg-gold text-warriors-navy px-4 py-2 rounded-full"
+              ><i class="fas fa-trophy mr-1"></i>8-Time NBA Champions</span
+            >
+            <span
+              class="badge bg-white text-warriors-navy px-4 py-2 rounded-full"
+              ><i class="fas fa-medal mr-1"></i>2025 Conference Leaders</span
+            >
+          </div>
         </div>
       </div>
     </header>
-    <main class="container py-5">
-      <h1 class="text-center mb-4">
-        Welcome to the Golden State Warriors Team Roster Showcase
-      </h1>
-      <p class="lead text-center">
-        Explore the team, meet the players, and learn more about your favorite
-        Warriors!
-      </p>
-      <div class="text-center mt-5">
-        <a href="roster.html" class="btn btn-warning btn-lg"
-          >View Team Roster</a
-        >
-      </div>
+    <main>
+      <!-- Intro Section -->
+      <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2
+                class="text-4xl font-poppins font-bold mb-6 text-warriors-navy animate-slide-up"
+              >
+                The Warriors Dynasty
+              </h2>
+              <p class="text-lg text-gray-700 mb-6">
+                Experience the electrifying energy of the Golden State Warriors,
+                a team that redefines basketball with skill, passion, and
+                innovation.
+              </p>
+              <div class="flex space-x-4">
+                <a
+                  href="roster.html"
+                  class="btn bg-warriors-navy text-white px-6 py-3 rounded-full hover:bg-gold hover:text-warriors-navy transition-all"
+                >
+                  <i class="fas fa-users mr-2"></i>Explore Roster
+                </a>
+                <a
+                  href="about.html"
+                  class="btn border-warriors-navy text-warriors-navy px-6 py-3 rounded-full hover:bg-warriors-navy hover:text-white transition-all"
+                >
+                  <i class="fas fa-info-circle mr-2"></i>Our Story
+                </a>
+              </div>
+            </div>
+            <div class="relative">
+              <div
+                class="bg-white rounded-2xl shadow-2xl p-8 animate-slide-up delay-200"
+              >
+                <div
+                  class="bg-warriors-navy rounded-lg p-10 mb-6 flex items-center justify-center h-80"
+                >
+                  <i class="fas fa-basketball-ball text-gold text-8xl"></i>
+                </div>
+                <div class="grid grid-cols-3 gap-6 text-center">
+                  <div>
+                    <h3
+                      class="text-4xl font-bold text-warriors-navy counter"
+                      data-target="12"
+                    >
+                      0
+                    </h3>
+                    <p class="text-gray-600">All-Stars</p>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-4xl font-bold text-warriors-navy counter"
+                      data-target="8"
+                    >
+                      0
+                    </h3>
+                    <p class="text-gray-600">Championships</p>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-4xl font-bold text-warriors-navy counter"
+                      data-target="45"
+                    >
+                      0
+                    </h3>
+                    <p class="text-gray-600">Wins (2025)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Discover Section -->
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl font-poppins font-bold mb-6 text-warriors-navy">
+            Discover Our Legacy
+          </h2>
+          <p class="text-lg text-gray-700 mb-12">
+            Uncover the heart of the Warriors' success
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="card bg-white shadow-xl rounded-2xl p-6 transform hover:scale-105 transition-all"
+            >
+              <div
+                class="bg-gold rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-users text-warriors-navy text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-warriors-navy">Our Roster</h3>
+              <p class="text-gray-600">
+                Meet the stars driving our success on the court.
+              </p>
+              <a
+                href="roster.html"
+                class="btn border-warriors-navy text-warriors-navy mt-4 rounded-full hover:bg-warriors-navy hover:text-white"
+                >View Roster</a
+              >
+            </div>
+            <div
+              class="card bg-white shadow-xl rounded-2xl p-6 transform hover:scale-105 transition-all"
+            >
+              <div
+                class="bg-gold rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-history text-warriors-navy text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-warriors-navy">Our History</h3>
+              <p class="text-gray-600">Explore our journey to NBA dominance.</p>
+              <a
+                href="about.html"
+                class="btn border-warriors-navy text-warriors-navy mt-4 rounded-full hover:bg-warriors-navy hover:text-white"
+                >Learn More</a
+              >
+            </div>
+            <div
+              class="card bg-white shadow-xl rounded-2xl p-6 transform hover:scale-105 transition-all"
+            >
+              <div
+                class="bg-gold rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-calendar-alt text-warriors-navy text-3xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-warriors-navy">
+                Game Schedule
+              </h3>
+              <p class="text-gray-600">Join us for thrilling NBA action.</p>
+              <a
+                href="#"
+                class="btn border-warriors-navy text-warriors-navy mt-4 rounded-full hover:bg-warriors-navy hover:text-white"
+                >View Schedule</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Players -->
+      <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-3xl font-poppins font-bold text-center text-warriors-navy mb-6"
+          >
+            Our Stars
+          </h2>
+          <p class="text-lg text-gray-700 text-center mb-12">
+            Meet the faces of our franchise
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card-flip">
+              <div class="card-flip-inner">
+                <div
+                  class="card-flip-front bg-white shadow-xl rounded-2xl overflow-hidden"
+                >
+                  <img
+                    src="https://images.pexels.com/photos/11761424/pexels-photo-11761424.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Stephen Curry"
+                    class="w-full h-64 object-cover"
+                  />
+                  <div class="p-4 text-center">
+                    <h4 class="font-bold text-warriors-navy">Stephen Curry</h4>
+                    <p class="text-gray-600">Point Guard</p>
+                  </div>
+                </div>
+                <div
+                  class="card-flip-back bg-warriors-navy text-white p-4 flex items-center justify-center"
+                >
+                  <div class="text-center">
+                    <h4 class="font-bold">Stephen Curry</h4>
+                    <p>3-Point King</p>
+                    <a
+                      href="roster.html"
+                      class="btn border-gold text-gold mt-2 rounded-full hover:bg-gold hover:text-warriors-navy"
+                      >View Profile</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-flip">
+              <div class="card-flip-inner">
+                <div
+                  class="card-flip-front bg-white shadow-xl rounded-2xl overflow-hidden"
+                >
+                  <img
+                    src="https://images.pexels.com/photos/22523147/pexels-photo-22523147/free-photo-of-basketball-player-dribbling.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Klay Thompson"
+                    class="w-full h-64 object-cover"
+                  />
+                  <div class="p-4 text-center">
+                    <h4 class="font-bold text-warriors-navy">Klay Thompson</h4>
+                    <p class="text-gray-600">Shooting Guard</p>
+                  </div>
+                </div>
+                <div
+                  class="card-flip-back bg-warriors-navy text-white p-4 flex items-center justify-center"
+                >
+                  <div class="text-center">
+                    <h4 class="font-bold">Klay Thompson</h4>
+                    <p>Splash Brother</p>
+                    <a
+                      href="roster.html"
+                      class="btn border-gold text-gold mt-2 rounded-full hover:bg-gold hover:text-warriors-navy"
+                      >View Profile</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-flip">
+              <div class="card-flip-inner">
+                <div
+                  class="card-flip-front bg-white shadow-xl rounded-2xl overflow-hidden"
+                >
+                  <img
+                    src="https://images.pexels.com/photos/3689680/pexels-photo-3689680.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Draymond Green"
+                    class="w-full h-64 object-cover"
+                  />
+                  <div class="p-4 text-center">
+                    <h4 class="font-bold text-warriors-navy">Draymond Green</h4>
+                    <p class="text-gray-600">Power Forward</p>
+                  </div>
+                </div>
+                <div
+                  class="card-flip-back bg-warriors-navy text-white p-4 flex items-center justify-center"
+                >
+                  <div class="text-center">
+                    <h4 class="font-bold">Draymond Green</h4>
+                    <p>Defensive Anchor</p>
+                    <a
+                      href="roster.html"
+                      class="btn border-gold text-gold mt-2 rounded-full hover:bg-gold hover:text-warriors-navy"
+                      >View Profile</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="py-16 bg-warriors-navy text-white text-center">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-poppins font-bold mb-6">
+            Meet the Full Squad
+          </h2>
+          <p class="text-lg mb-8">
+            Dive into the stories and stats of our championship roster.
+          </p>
+          <a
+            href="roster.html"
+            class="btn bg-gold text-warriors-navy px-8 py-3 rounded-full hover:bg-white transition-all"
+            >View Full Roster</a
+          >
+        </div>
+      </section>
     </main>
-    <footer>
-      <!-- place footer here -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h5 class="font-poppins font-bold text-lg mb-4">
+            <i class="fas fa-basketball-ball mr-2"></i>Warriors Elite
+          </h5>
+          <p class="text-gray-400">
+            Dominating the NBA with skill and heart in 2025.
+          </p>
+        </div>
+        <div>
+          <h5 class="font-poppins font-bold text-lg mb-4">Quick Links</h5>
+          <ul class="list-none space-y-2">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-gold"
+                ><i class="fas fa-chevron-right mr-2"></i>Home</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-gold"
+                ><i class="fas fa-chevron-right mr-2"></i>About</a
+              >
+            </li>
+            <li>
+              <a href="roster.html" class="text-gray-400 hover:text-gold"
+                ><i class="fas fa-chevron-right mr-2"></i>Roster</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-poppins font-bold text-lg mb-4">Follow Us</h5>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-gold text-xl"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-gold text-xl"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-gold text-xl"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-gold text-xl"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-8 border-gray-700" />
+      <div class="text-center text-gray-400">
+        © 2025 Warriors Elite Roster Showcase | All Rights Reserved
+      </div>
     </footer>
-    <!-- Bootstrap JavaScript Libraries -->
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
-
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <script src="js/players.js"></script>
-    <script src="js/roster.js"></script>
+    <!-- Counter Animation Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll(".counter");
+        counters.forEach((counter) => {
+          const updateCounter = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+            const increment = target / 100;
+            if (count < target) {
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(updateCounter, 20);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCounter();
+        });
+      });
+    </script>
+    <script src="players.js"></script>
+    <script src="roster.js"></script>
   </body>
 </html>

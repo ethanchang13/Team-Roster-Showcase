@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>My Team Roster</title>
-    <!-- Required meta tags -->
+    <title>About | Warriors Elite</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <!-- Bootstrap CSS v5.2.1 -->
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,53 +27,296 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Warriors Showcase</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="roster.html">Roster</a>
-            </li>
-          </ul>
+    <header class="relative">
+      <nav
+        class="navbar navbar-expand-lg bg-warriors-navy fixed top-0 w-full z-50 shadow-xl transition-all duration-300"
+      >
+        <div class="container mx-auto px-4">
+          <a
+            class="navbar-brand text-gold font-poppins font-extrabold text-2xl flex items-center"
+            href="index.html"
+          >
+            <i class="fas fa-basketball-ball mr-3 text-3xl"></i>Warriors Elite
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto space-x-4">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-gold hover:text-white font-semibold transition-colors"
+                  href="index.html"
+                  ><i class="fas fa-home mr-1"></i>Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-gold hover:text-white font-semibold transition-colors active"
+                  href="about.html"
+                  ><i class="fas fa-info-circle mr-1"></i>About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-gold hover:text-white font-semibold transition-colors"
+                  href="roster.html"
+                  ><i class="fas fa-users mr-1"></i>Roster</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="bg-warriors-navy text-white py-24 text-center">
+        <div class="container mx-auto px-4">
+          <h1 class="text-5xl font-poppins font-extrabold mb-4 animate-fade-in">
+            Our Legacy
+          </h1>
+          <p class="text-xl">
+            The story of the Golden State Warriors' rise to greatness
+          </p>
         </div>
       </div>
     </header>
-
-    <main class="container py-5">
-      <h1 class="text-center mb-4">About the Team</h1>
-      <p class="lead">
-        The Golden State Warriors are one of the most iconic franchises in NBA
-        history. Based in San Francisco, California, the team has claimed
-        multiple championships in the modern era, driven by a culture of
-        excellence, teamwork, and innovation.
-      </p>
-      <p>
-        The Warriors have revolutionized the game with their three-point
-        shooting and fast-paced playstyle, led by superstar Stephen Curry. Known
-        for developing talent and fostering team chemistry, the Warriors
-        continue to be a dominant force in the league.
-      </p>
+    <main class="container mx-auto py-16 px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2">
+          <div
+            class="bg-white shadow-2xl rounded-2xl p-8 mb-8 animate-slide-up"
+          >
+            <h2
+              class="text-3xl font-poppins font-bold mb-6 text-warriors-navy border-b-4 border-gold pb-2"
+            >
+              Our Journey
+            </h2>
+            <p class="text-lg text-gray-700">
+              Since 1946, the Golden State Warriors have been a cornerstone of
+              NBA history, evolving from Philadelphia to a global phenomenon in
+              San Francisco.
+            </p>
+            <p class="text-gray-700 mt-4">
+              With a revolutionary approach to basketball, led by coach Steve
+              Kerr, the Warriors have pioneered the three-point era, securing 8
+              NBA titles, including 2022.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              <div class="bg-gray-50 p-6 rounded-lg shadow">
+                <h3 class="text-xl font-bold text-warriors-navy mb-4">
+                  <i class="fas fa-trophy text-gold mr-2"></i>Achievements
+                </h3>
+                <ul class="list-none space-y-2">
+                  <li>
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i>NBA
+                    Champions (2015, 2017, 2018, 2022)
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i
+                    >Western Conference Leaders (2015-2019, 2022, 2025)
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle text-green-500 mr-2"></i
+                    >Record 73-9 Season (2016)
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg shadow">
+                <h3 class="text-xl font-bold text-warriors-navy mb-4">
+                  <i class="fas fa-chart-line text-gold mr-2"></i>2025 Stats
+                </h3>
+                <ul class="list-none space-y-2">
+                  <li>
+                    <i class="fas fa-basketball-ball text-gold mr-2"></i>Record:
+                    45-15
+                  </li>
+                  <li>
+                    <i class="fas fa-basketball-ball text-gold mr-2"></i>Points
+                    Per Game: 120.2
+                  </li>
+                  <li>
+                    <i class="fas fa-basketball-ball text-gold mr-2"></i
+                    >Three-Point %: 40.1%
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-warriors-navy mt-8 mb-4">
+              Philosophy
+            </h3>
+            <ul class="list-disc pl-6 text-gray-700">
+              <li>
+                <strong>Strength in Numbers</strong>: Teamwork fuels our
+                victories
+              </li>
+              <li>
+                <strong>Innovation</strong>: Redefining basketball with bold
+                strategies
+              </li>
+              <li><strong>Community</strong>: Empowering the Bay Area</li>
+            </ul>
+          </div>
+          <div
+            class="bg-white shadow-2xl rounded-2xl p-8 animate-slide-up delay-200"
+          >
+            <h2
+              class="text-3xl font-poppins font-bold mb-6 text-warriors-navy border-b-4 border-gold pb-2"
+            >
+              Leadership
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="flex items-center">
+                <img
+                  src="https://images.unsplash.com/photo-1516321310765-79e44b9e30c3"
+                  alt="Steve Kerr"
+                  class="w-24 h-24 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h4 class="font-bold text-warriors-navy">Steve Kerr</h4>
+                  <p class="text-gray-600">Head Coach</p>
+                  <p class="text-sm text-gray-500">
+                    A visionary leader with 9 NBA championships as a player and
+                    coach.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <img
+                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7"
+                  alt="Bob Myers"
+                  class="w-24 h-24 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h4 class="font-bold text-warriors-navy">Bob Myers</h4>
+                  <p class="text-gray-600">
+                    President of Basketball Operations
+                  </p>
+                  <p class="text-sm text-gray-500">
+                    Architect of the Warriors' dynasty through strategic roster
+                    building.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="bg-white shadow-2xl rounded-2xl p-8 mb-8 animate-slide-up"
+          >
+            <h3 class="text-xl font-bold text-warriors-navy mb-4">
+              Chase Center
+            </h3>
+            <img
+              src="https://images.unsplash.com/photo-1591182223207-1b7171c308c2"
+              alt="Chase Center"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <p class="text-gray-700">
+              Our home since 2019, Chase Center is a 18,064-seat arena designed
+              for fans and players alike.
+            </p>
+            <ul class="list-none mt-4">
+              <li>
+                <i class="fas fa-map-marker-alt text-gold mr-2"></i>1 Warriors
+                Way, San Francisco
+              </li>
+              <li><i class="fas fa-phone text-gold mr-2"></i>(415) 555-7890</li>
+            </ul>
+          </div>
+          <div
+            class="bg-white shadow-2xl rounded-2xl p-8 animate-slide-up delay-200"
+          >
+            <h3 class="text-xl font-bold text-warriors-navy mb-4">
+              Community Impact
+            </h3>
+            <p class="text-gray-700">We uplift our community through:</p>
+            <ul class="list-disc pl-6 text-gray-700">
+              <li>Youth basketball clinics</li>
+              <li>Charity drives</li>
+              <li>Education programs</li>
+            </ul>
+            <a
+              href="#"
+              class="btn border-warriors-navy text-warriors-navy mt-4 rounded-full hover:bg-warriors-navy hover:text-white"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
     </main>
-
-    <footer>
-      <!-- place footer here -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h5 class="font-poppins font-bold text-lg mb-4">
+            <i class="fas fa-basketball-ball mr-2"></i>Warriors Elite
+          </h5>
+          <p class="text-gray-400">
+            Dominating the NBA with skill and heart in 2025.
+          </p>
+        </div>
+        <div>
+          <h5 class="font-poppins font-bold text-lg mb-4">Quick Links</h5>
+          <ul class="list-none space-y-2">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-gold"
+                ><i class="fas fa-chevron-right mr-2"></i>Home</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-gold"
+                ><i class="fas fa-chevron-right mr-2"></i>About</a
+              >
+            </li>
+            <li>
+              <a href="roster.html" class="text-gray-400 hover:text-gold"
+                ><i class="fas fa-chevron-right mr-2"></i>Roster</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-poppins font-bold text-lg mb-4">Follow Us</h5>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-gold text-xl"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-gold text-xl"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-gold text-xl"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="text-gray-400 hover:text-gold text-xl"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <hr class="my-8 border-gray-700" />
+      <div class="text-center text-gray-400">
+        © 2025 Warriors Elite Roster Showcase | All Rights Reserved
+      </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="players.js"></script>
+    <script src="roster.js"></script>
   </body>
 </html>
