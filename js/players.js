@@ -43,7 +43,7 @@ const playersList = [
     "Curry",
     "PG",
     37,
-    "https://images.unsplash.com/photo-1612558485966-4b3c5771e685",
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png",
     "Revolutionized basketball with his long-range shooting, holding the NBA record for most career three-pointers.",
     true
   ),
