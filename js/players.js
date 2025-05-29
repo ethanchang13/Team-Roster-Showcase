@@ -44,66 +44,127 @@ const playersList = [
     "PG",
     37,
     "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png",
-    "Revolutionized basketball with his long-range shooting, holding the NBA record for most career three-pointers.",
-    true
-  ),
-  new Player(
-    "Klay",
-    "Thompson",
-    "SG",
-    35,
-    "https://images.unsplash.com/photo-1519861531473-3c12b3019b95",
-    "Set an NBA record by scoring 37 points in a single quarter.",
-    true
+    "First player in NBA history to reach 4,000 career three-pointers, continuing to redefine the game's perimeter play."
   ),
   new Player(
     "Draymond",
     "Green",
     "PF",
     35,
-    "https://images.unsplash.com/photo-1542751371-adc38448a05e",
-    "A defensive maestro, known for guarding all five positions on the court.",
-    true
-  ),
-  new Player(
-    "Andrew",
-    "Wiggins",
-    "SF",
-    30,
-    "https://images.unsplash.com/photo-1516321310765-79e44b9e30c3",
-    "Earned All-Star honors in 2022 for his two-way play."
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/203110.png",
+    "Anchored the Warriors' defense, leading the team to a top-5 defensive rating in the 2024-25 season."
   ),
   new Player(
     "Kevon",
     "Looney",
     "C",
     29,
-    "https://images.unsplash.com/photo-1591182223207-1b7171c308c2",
-    "A rebounding machine, led the Warriors in rebounds during the 2022 playoffs."
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1626172.png",
+    "Known for his durability and rebounding prowess, played all 82 games in the 2024-25 season."
+  ),
+  new Player(
+    "Moses",
+    "Moody",
+    "SG",
+    22,
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1630541.png",
+    "Known for his three-point shooting and defensive versatility, played 74 games in the 2024-25 season."
+  ),
+  new Player(
+    "Gary",
+    "Payton II",
+    "SG",
+    32,
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1627780.png",
+    "Renowned for his perimeter defense and athleticism, scored a playoff career-high 16 points in 2025."
+  ),
+  new Player(
+    "Jackson",
+    "Rowe",
+    "PF",
+    27,
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1642050.png",
+    "Veteran forward known for his scoring and versatility, provided leadership and experience."
+  ),
+  new Player(
+    "Pat",
+    "Spencer",
+    "PG",
+    28,
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1630311.png",
+    "Former lacrosse star turned professional basketball player, known for his athleticism and playmaking."
+  ),
+  new Player(
+    "Jimmy",
+    "Butler III",
+    "SF",
+    35,
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/202710.png",
+    "Acquired midseason, provided a significant boost on both ends of the floor, averaging 17.9 points per game."
+  ),
+  new Player(
+    "Buddy",
+    "Hield",
+    "SG",
+    32,
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1627741.png",
+    "Sharpshooter who made NBA history by hitting 12 three-pointers in his first two games with the Warriors."
+  ),
+  new Player(
+    "Quinten",
+    "Post",
+    "C",
+    25,
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1642366.png",
+    "First Dutch player drafted since 2009, known for his shooting range and size as a 7-footer."
+  ),
+  new Player(
+    "Gui",
+    "Santos",
+    "SF",
+    22,
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1630611.png",
+    "Brazilian forward who cracked the rotation midseason, providing rebounding and passing off the bench."
+  ),
+  new Player(
+    "Taran",
+    "Armstrong",
+    "PG",
+    23,
+    "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4896850.png",
+    "Australian guard who signed a two-way contract, known for his court vision and playmaking abilities."
+  ),
+  new Player(
+    "Brandin",
+    "Podziemski",
+    "SG",
+    22,
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1641764.png",
+    "Named to the 2025 NBA All-Rookie First Team, leading all rookies in charges drawn."
+  ),
+  new Player(
+    "Trayce",
+    "Jackson-Davis",
+    "PF",
+    25,
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1631218.png",
+    "Started and ended the season as the Warriors' center, known for his rim protection and finishing."
   ),
   new Player(
     "Jonathan",
     "Kuminga",
     "SF",
     22,
-    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
-    "One of the youngest players to dunk in an NBA All-Star game."
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1630228.png",
+    "Averaged 15.3 points per game in the 2024-25 season, showcasing his athleticism and scoring ability."
   ),
   new Player(
-    "Dennis",
-    "Schroder",
-    "PG",
-    31,
-    "https://images.unsplash.com/photo-1554126807-6b10f6f6692a",
-    "Known for his clutch performance in international play for Germany."
-  ),
-  new Player(
-    "Brandin",
-    "Podzemski",
-    "SG",
-    22,
-    "https://images.unsplash.com/photo-1518609571773-39b2d303a723",
-    "Rising star with a deadly three-point shot and high basketball IQ."
+    "Kevin",
+    "Devon Knox II",
+    "SF",
+    25,
+    "https://cdn.nba.com/headshots/nba/latest/1040x760/1628995.png",
+    "Knox became one of the youngest players to debut for the Knicks and is known for his explosive athleticism and ability to stretch the floor with a smooth shooting stroke."
   ),
 ];
 

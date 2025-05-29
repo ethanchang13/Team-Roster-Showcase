@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const playerModalBody = document.getElementById("playerModalBody");
   const playerModalLabel = document.getElementById("playerModalLabel");
   const allPlayersBtn = document.getElementById("all-players");
-  const starPlayersBtn = document.getElementById("star-players");
   const searchInput = document.getElementById("searchInput");
 
   // Debounce function to limit rapid search updates
@@ -94,31 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   allPlayersBtn.addEventListener("click", () => {
     allPlayersBtn.classList.add("active", "bg-warriors-navy", "text-white");
-    starPlayersBtn.classList.remove("active", "bg-warriors-navy", "text-white");
-    starPlayersBtn.classList.add("border-warriors-navy", "text-warriors-navy");
     searchInput.value = "";
     render(players);
-  });
-
-  starPlayersBtn.addEventListener("click", () => {
-    starPlayersBtn.classList.add("active", "bg-warriors-navy", "text-white");
-    allPlayersBtn.classList.remove("active", "bg-warriors-navy", "text-white");
-    allPlayersBtn.classList.add("border-warriors-navy", "text-warriors-navy");
-    searchInput.value = "";
-    render(players.filter((player) => player.starPlayer));
   });
 
   // Debounced search handler
   const handleSearch = debounce(() => {
     const query = searchInput.value.trim().toLowerCase();
-    const activeFilter = starPlayersBtn.classList.contains("active")
-      ? "star"
-      : "all";
     let filteredPlayers = players;
-
-    if (activeFilter === "star") {
-      filteredPlayers = players.filter((player) => player.starPlayer);
-    }
 
     filteredPlayers = filteredPlayers.filter((player) =>
       player.fullName.toLowerCase().includes(query)
@@ -131,14 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Ensure grid updates when search is cleared
   searchInput.addEventListener("change", () => {
     if (searchInput.value.trim() === "") {
-      const activeFilter = starPlayersBtn.classList.contains("active")
-        ? "star"
-        : "all";
-      if (activeFilter === "star") {
-        render(players.filter((player) => player.starPlayer));
-      } else {
-        render(players);
-      }
+      render(players);
     }
   });
 });

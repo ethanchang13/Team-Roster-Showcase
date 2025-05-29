@@ -102,17 +102,10 @@
           <div class="btn-group" role="group" aria-label="Filter buttons">
             <button
               type="button"
-              class="btn border-warriors-navy text-warriors-navy px-4 py-2 rounded-l-full active"
+              class="btn border-warriors-navy text-warriors-navy px-4 py-2 rounded-full active"
               id="all-players"
             >
               All Players
-            </button>
-            <button
-              type="button"
-              class="btn border-warriors-navy text-warriors-navy px-4 py-2 rounded-r-full"
-              id="star-players"
-            >
-              Star Players
             </button>
           </div>
         </div>
@@ -124,42 +117,6 @@
           class="form-control rounded-full px-4 py-3 shadow-md focus:ring-gold focus:border-gold"
           placeholder="Search by player name..."
         />
-      </div>
-      <div class="bg-white shadow-2xl rounded-2xl p-8 mb-8">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <h5 class="font-poppins font-bold text-warriors-navy mb-4 md:mb-0">
-            <i class="fas fa-info-circle text-gold mr-2"></i>2025 Team Stats
-          </h5>
-          <div class="flex space-x-8">
-            <div class="text-center">
-              <h4
-                class="text-3xl font-bold text-warriors-navy counter"
-                data-target="45"
-              >
-                0
-              </h4>
-              <p class="text-gray-600">Wins</p>
-            </div>
-            <div class="text-center">
-              <h4
-                class="text-3xl font-bold text-warriors-navy counter"
-                data-target="15"
-              >
-                0
-              </h4>
-              <p class="text-gray-600">Losses</p>
-            </div>
-            <div class="text-center">
-              <h4
-                class="text-3xl font-bold text-warriors-navy counter"
-                data-target="75"
-              >
-                0
-              </h4>
-              <p class="text-gray-600">Win %</p>
-            </div>
-          </div>
-        </div>
       </div>
       <div
         id="rosterGrid"
@@ -289,7 +246,7 @@
         });
       });
     </script>
-    <script src="players.js"></script>
-    <script src="roster.js"></script>
+    <script src="js/players.js"></script>
+    <script src="js/roster.js"></script>
   </body>
 </html>
