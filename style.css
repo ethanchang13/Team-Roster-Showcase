@@ -30,6 +30,19 @@ body {
   font-weight: 800;
 }
 
+.nav-link {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #fcd34d !important;
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  color: #ffc107 !important;
+}
+
 .hero-parallax {
   background-image: url("https://www.prosportsbackgrounds.com/wp-content/uploads/Golden-State-Warriors-wallpaper-logo-desktop-NBA-2024-2025-thumb.jpg");
   background-attachment: fixed;
@@ -134,38 +147,118 @@ i.fas fa-medal mr-1 {
 
 /* Flip Card Styles */
 .card-flip {
-  perspective: 1000px;
+  position: relative;
   width: 100%;
   height: 400px;
+  overflow: hidden;
 }
 
 .card-flip-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.card-flip:hover .card-flip-inner {
-  transform: rotateY(180deg);
 }
 
 .card-flip-front,
 .card-flip-back {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   backface-visibility: hidden;
   border-radius: 20px;
-  overflow: hidden;
+}
+
+.card-flip-front {
+  z-index: 2;
+  transform: scale(1);
+  opacity: 1;
 }
 
 .card-flip-back {
-  transform: rotateY(180deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+  pointer-events: none;
+}
+
+.card-flip:hover .card-flip-front {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.98);
+}
+
+.card-flip:hover .card-flip-back {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  z-index: 3;
+  pointer-events: auto;
+}
+
+#all-players {
+  background-color: transparent;
+  color: #1d428a;
+  border: 2px solid #1d428a;
+}
+
+#all-players.active {
+  background-color: transparent;
+  color: #1d428a;
+  border: 2px solid #1d428a;
+}
+
+#all-players:hover {
+  background-color: #1d428a;
+  color: #ffffff;
+}
+
+.btn.bg-gold {
+  background-color: #ffc107 !important;
+  color: #1d428a !important;
+  transition: transform 0.3s ease;
+}
+
+.btn.bg-gold:hover {
+  transform: scale(1.05);
+  background-color: #ffc107 !important;
+  color: #1d428a !important;
+}
+
+.btn.bg-warriors-navy {
+  background-color: #1d428a !important;
+  color: #ffffff !important;
+  transition: transform 0.3s ease;
+}
+
+.btn.bg-warriors-navy:hover {
+  transform: scale(1.05);
+  background-color: #1d428a !important;
+  color: #ffffff !important;
+}
+
+.btn.border-gold {
+  background-color: transparent !important;
+  color: #ffc107 !important;
+  border: 2px solid #ffc107 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.border-gold:hover {
+  background-color: #ffc107 !important;
+  color: #1d428a !important;
+}
+
+.btn.border-warriors-navy {
+  background-color: transparent !important;
+  color: #1d428a !important;
+  border: 2px solid #1d428a !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.border-warriors-navy:hover {
+  background-color: #1d428a !important;
+  color: #ffffff !important;
 }
 
 /* Animations */

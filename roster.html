@@ -76,7 +76,10 @@
           </div>
         </div>
       </nav>
-      <div class="bg-warriors-navy text-white py-24 text-center">
+      <div
+        style="background-color: #1c386f"
+        class="text-white py-24 text-center"
+      >
         <div class="container mx-auto px-4">
           <h1 class="text-5xl font-poppins font-extrabold mb-4 animate-fade-in">
             Our Roster
@@ -226,26 +229,6 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <!-- Counter Animation Script -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const counters = document.querySelectorAll(".counter");
-        counters.forEach((counter) => {
-          const updateCounter = () => {
-            const target = +counter.getAttribute("data-target");
-            const count = +counter.innerText;
-            const increment = target / 100;
-            if (count < target) {
-              counter.innerText = Math.ceil(count + increment);
-              setTimeout(updateCounter, 20);
-            } else {
-              counter.innerText = target;
-            }
-          };
-          updateCounter();
-        });
-      });
-    </script>
     <script src="js/players.js"></script>
     <script src="js/roster.js"></script>
   </body>
