@@ -1,4 +1,6 @@
+// Wait until the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
+  // Select key DOM elements
   const grid = document.getElementById("rosterGrid");
   const playerModal = new bootstrap.Modal(
     document.getElementById("playerModal")
@@ -8,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const allPlayersBtn = document.getElementById("all-players");
   const searchInput = document.getElementById("searchInput");
 
-  // Debounce function to limit rapid search updates
+  // Limit rapid input triggers with debounce
   const debounce = (func, delay) => {
     let timeoutId;
     return (...args) => {
@@ -17,8 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   };
 
+  // Render player cards into the grid
   const render = (list) => {
     grid.innerHTML = "";
+
+    // Show message if no players match
     if (list.length === 0) {
       grid.innerHTML = `
         <div class="col-span-full text-center py-12">
@@ -31,14 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    // Create and display a card for each player
     list.forEach((player, index) => {
       const col = document.createElement("div");
       col.className = "animate-slide-up";
-      col.style.animationDelay = `${index * 0.1}s`; // Stagger animations
+      col.style.animationDelay = `${index * 0.1}s`;
       const card = document.createElement("div");
       card.className = `card bg-white shadow-xl rounded-2xl overflow-hidden ${
         player.starPlayer ? "star-player" : ""
       }`;
+
       card.innerHTML = `
         <div class="relative">
           <img src="${player.photo}" alt="${
@@ -58,15 +65,25 @@ document.addEventListener("DOMContentLoaded", () => {
           </button>
         </div>
       `;
+
       col.appendChild(card);
       grid.appendChild(col);
 
+      // Select the "More Info" button within the card
       const moreInfoBtn = card.querySelector("button");
-      moreInfoBtn.addEventListener("click", () => {
+
+      // Add functionality to "More Info" button
+      moreInfoBtn.addEventListener("click", function () {
+        const index = this.getAttribute("data-player-index");
+        const player = list[index];
+
         playerModalLabel.textContent = player.fullName;
+
         const statusBadge = player.starPlayer
           ? '<span class="badge bg-gold text-warriors-navy px-3 py-1 rounded-full"><i class="fas fa-star mr-1"></i>Star Player</span>'
           : "";
+
+        // Populate modal with player details
         playerModalBody.innerHTML = `
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="text-center">
@@ -91,13 +108,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize with all players
   render(players);
 
+  // "All Players" button resets view
   allPlayersBtn.addEventListener("click", () => {
     allPlayersBtn.classList.add("active", "bg-warriors-navy", "text-white");
     searchInput.value = "";
     render(players);
   });
 
-  // Debounced search handler
+  // Search input with debounce
   const handleSearch = debounce(() => {
     const query = searchInput.value.trim().toLowerCase();
     let filteredPlayers = players;
@@ -108,9 +126,10 @@ document.addEventListener("DOMContentLoaded", () => {
     render(filteredPlayers);
   }, 300);
 
+  // Handle typing in search bar
   searchInput.addEventListener("input", handleSearch);
 
-  // Ensure grid updates when search is cleared
+  // Reset grid when search is cleared
   searchInput.addEventListener("change", () => {
     if (searchInput.value.trim() === "") {
       render(players);

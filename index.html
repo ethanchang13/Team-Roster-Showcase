@@ -7,16 +7,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+
     <!-- Tailwind CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -24,21 +27,27 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- Header with fixed navbar and hero banner -->
     <header class="relative">
-      <!-- Navbar -->
+      <!-- Navigation Bar -->
       <nav
         class="navbar navbar-expand-lg bg-warriors-navy fixed top-0 w-full z-50 shadow-xl transition-all duration-300"
       >
         <div class="container mx-auto px-4">
+          <!-- Logo / Brand -->
           <a
             class="navbar-brand text-gold font-poppins font-extrabold text-2xl flex items-center"
             href="index.html"
           >
             <i class="fas fa-basketball-ball mr-3 text-3xl"></i>Warriors Elite
           </a>
+
+          <!-- Toggler for mobile view -->
           <button
             class="navbar-toggler"
             type="button"
@@ -50,6 +59,8 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- Nav links -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto space-x-4">
               <li class="nav-item">
@@ -77,6 +88,8 @@
           </div>
         </div>
       </nav>
+
+      <!-- Hero Section: Fullscreen banner with overlay and callouts -->
       <div
         class="hero-parallax relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white"
       >
@@ -89,6 +102,7 @@
             A Legacy of Excellence in the 2025 NBA Season
           </p>
           <div class="flex justify-center space-x-4">
+            <!-- Badges showing achievements -->
             <span
               class="badge bg-gold text-warriors-navy px-4 py-2 rounded-full"
               ><i class="fas fa-trophy mr-1"></i>7-Time NBA Champions</span
@@ -96,17 +110,20 @@
             <span
               class="badge bg-blue-600 text-warriors-navy px-4 py-2 rounded-full"
             >
-              <i class="fas fa-medal mr-1"></i>2025 Conference Leaders
+              <i class="fas fa-medal mr-1"></i>2025 Western Semifinalists
             </span>
           </div>
         </div>
       </div>
     </header>
+
+    <!-- Main content starts -->
     <main>
-      <!-- Intro Section -->
+      <!-- Intro Section: Team mission and action buttons -->
       <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-4">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
             <div>
               <h2
                 class="text-4xl font-poppins font-bold mb-6 text-warriors-navy animate-slide-up"
@@ -118,6 +135,7 @@
                 a team that redefines basketball with skill, passion, and
                 innovation.
               </p>
+              <!-- Action buttons -->
               <div class="flex space-x-4">
                 <a
                   href="roster.html"
@@ -133,6 +151,8 @@
                 </a>
               </div>
             </div>
+
+            <!-- Stats Card -->
             <div class="relative">
               <div
                 class="bg-white rounded-2xl shadow-2xl p-8 animate-slide-up delay-200"
@@ -142,6 +162,7 @@
                 >
                   <i class="fas fa-basketball-ball text-gold text-8xl"></i>
                 </div>
+                <!-- Counters for All-Stars, Championships, Wins -->
                 <div class="grid grid-cols-3 gap-6 text-center">
                   <div>
                     <h3
@@ -177,7 +198,7 @@
         </div>
       </section>
 
-      <!-- Discover Section -->
+      <!-- Discover Section: History and Roster Cards -->
       <section class="py-16 bg-white">
         <div class="container mx-auto px-4 text-center">
           <h2 class="text-3xl font-poppins font-bold mb-6 text-warriors-navy">
@@ -189,6 +210,7 @@
           <div
             class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center md:justify-around"
           >
+            <!-- History Card -->
             <div
               class="card bg-white shadow-xl rounded-2xl p-6 transform hover:scale-105 transition-all"
             >
@@ -206,7 +228,9 @@
                 Learn More
               </a>
             </div>
-          <div
+
+            <!-- Roster Card -->
+            <div
             class="card bg-white shadow-xl rounded-2xl p-6 transform hover:scale-105 transition-all"
           >
             <div
@@ -228,7 +252,7 @@
         </div>
       </section>
 
-      <!-- Featured Players -->
+      <!-- Featured Players Flip Cards -->
       <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
           <h2
@@ -240,6 +264,8 @@
             Meet the faces of our franchise
           </p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Individual Player Flip Cards -->
+            <!-- Stephen Curry Card -->
             <div class="card-flip">
               <div class="card-flip-inner">
                 <div
@@ -270,6 +296,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- Jonathan Kuminga Card -->
             <div class="card-flip">
               <div class="card-flip-inner">
                 <div
@@ -302,6 +330,8 @@
                 </div>
               </div>
             </div>
+
+            <!-- Draymond Green Card -->
             <div class="card-flip">
               <div class="card-flip-inner">
                 <div
@@ -336,7 +366,7 @@
         </div>
       </section>
 
-      <!-- Call to Action -->
+      <!-- Call to Action: Link to full roster -->
       <section class="py-16 bg-warriors-navy text-white text-center">
         <div class="container mx-auto px-4">
           <h2 class="text-3xl font-poppins font-bold mb-6">
@@ -354,7 +384,7 @@
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer with branding and social media links -->
     <footer class="bg-gray-900 text-white py-12">
       <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row justify-between items-center">
@@ -362,6 +392,7 @@
             <h2 class="text-2xl font-bold mb-2">Warriors Elite</h2>
             <p class="text-sm">© 2025 Warriors Elite. All rights reserved.</p>
           </div>
+          <!-- Social Media Links -->
           <ul class="flex space-x-4">
             <li>
               <a
@@ -373,7 +404,7 @@
             </li>
             <li>
               <a
-                href="https://x.com/warriors?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                href="https://x.com/warriors"
                 target="_blank"
                 class="text-white hover:text-gold transition-colors"
                 ><i class="fab fa-twitter"></i
@@ -381,7 +412,7 @@
             </li>
             <li>
               <a
-                href="https://www.instagram.com/warriors/?hl=en"
+                href="https://www.instagram.com/warriors/"
                 target="_blank"
                 class="text-white hover:text-gold transition-colors"
                 ><i class="fab fa-instagram"></i
@@ -391,6 +422,7 @@
         </div>
       </div>
     </footer>
+
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -402,7 +434,8 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
-    <!-- Counter Animation Script -->
+
+    <!-- Counter Animation -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const counters = document.querySelectorAll(".counter");
@@ -422,6 +455,7 @@
         });
       });
     </script>
+
     <script src="js/players.js"></script>
     <script src="js/roster.js"></script>
   </body>

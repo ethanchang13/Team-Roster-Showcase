@@ -7,16 +7,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+
     <!-- Tailwind CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -24,20 +27,26 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- Header with navbar and banner -->
     <header class="relative">
       <nav
         class="navbar navbar-expand-lg bg-warriors-navy fixed top-0 w-full z-50 shadow-xl transition-all duration-300"
       >
         <div class="container mx-auto px-4">
+          <!-- Logo -->
           <a
             class="navbar-brand text-gold font-poppins font-extrabold text-2xl flex items-center"
             href="index.html"
           >
             <i class="fas fa-basketball-ball mr-3 text-3xl"></i>Warriors Elite
           </a>
+
+          <!-- Mobile nav toggle -->
           <button
             class="navbar-toggler"
             type="button"
@@ -49,6 +58,8 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- Navigation links -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto space-x-4">
               <li class="nav-item">
@@ -76,6 +87,8 @@
           </div>
         </div>
       </nav>
+
+      <!-- Banner section -->
       <div
         style="background-color: #1c386f"
         class="text-white py-24 text-center"
@@ -90,7 +103,10 @@
         </div>
       </div>
     </header>
+
+    <!-- Main content -->
     <main class="container mx-auto py-16 px-4">
+      <!-- Title and filter row -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
         <div class="md:col-span-2">
           <h2 class="text-3xl font-poppins font-bold text-warriors-navy mb-4">
@@ -101,6 +117,7 @@
             powerhouse. Filter or search to explore their unique talents.
           </p>
         </div>
+        <!-- Filter button -->
         <div class="flex items-center justify-center md:justify-end">
           <div class="btn-group" role="group" aria-label="Filter buttons">
             <button
@@ -113,6 +130,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Search input -->
       <div class="mb-8">
         <input
           type="text"
@@ -121,11 +140,14 @@
           placeholder="Search by player name..."
         />
       </div>
+
+      <!-- Grid to display player cards -->
       <div
         id="rosterGrid"
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
       ></div>
-      <!-- Modal -->
+
+      <!-- Modal for showing player details -->
       <div
         class="modal fade"
         id="playerModal"
@@ -135,6 +157,7 @@
       >
         <div class="modal-dialog modal-lg">
           <div class="modal-content rounded-2xl shadow-xl">
+            <!-- Modal header -->
             <div
               class="modal-header bg-gradient-to-r from-warriors-navy to-gold text-white"
             >
@@ -151,7 +174,9 @@
                 aria-label="Close"
               ></button>
             </div>
+            <!-- Modal body (player info loads here) -->
             <div class="modal-body p-8" id="playerModalBody"></div>
+            <!-- Modal footer -->
             <div class="modal-footer border-t-0">
               <button
                 type="button"
@@ -165,6 +190,8 @@
         </div>
       </div>
     </main>
+
+    <!-- Footer section -->
     <footer class="bg-gray-900 text-white py-12">
       <div class="container mx-auto px-4">
         <div class="flex flex-col lg:flex-row justify-between items-center">
@@ -172,6 +199,7 @@
             <h2 class="text-2xl font-bold mb-2">Warriors Elite</h2>
             <p class="text-sm">© 2025 Warriors Elite. All rights reserved.</p>
           </div>
+          <!-- Social media links -->
           <ul class="flex space-x-4">
             <li>
               <a
@@ -183,7 +211,7 @@
             </li>
             <li>
               <a
-                href="https://x.com/warriors?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                href="https://x.com/warriors"
                 target="_blank"
                 class="text-white hover:text-gold transition-colors"
                 ><i class="fab fa-twitter"></i
@@ -191,7 +219,7 @@
             </li>
             <li>
               <a
-                href="https://www.instagram.com/warriors/?hl=en"
+                href="https://www.instagram.com/warriors/"
                 target="_blank"
                 class="text-white hover:text-gold transition-colors"
                 ><i class="fab fa-instagram"></i
@@ -201,6 +229,7 @@
         </div>
       </div>
     </footer>
+
     <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -212,6 +241,7 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+
     <script src="js/players.js"></script>
     <script src="js/roster.js"></script>
   </body>
